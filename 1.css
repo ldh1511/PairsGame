@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card_check{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: 9px;
+}
+.card_details.active .card_check div:nth-child(1){
+    transform: rotateY(180deg);
+    opacity: 0;
+    visibility: hidden;
+}
+.card_details.active .card_check div:nth-child(2){
+    transform: rotateY(0deg);
+    opacity: 1;
+    visibility: visible;
+}
+.card_side2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b0cac7;
+    border-radius: 9px;
+    transition: .8s;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateY(-180deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_side2 h1 {
+    text-shadow: 0 0 4px;
+    font-weight: 900;
+}
+.card_side1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #318fb5;
+    border-radius: 9px;
+    transition: .8s;
+    z-index: 2;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #f7d6bf;
+    color: white;
+}
+.container {
+    text-align: center;
+    font-family: segoe ui light;
+}
+.title{
+    padding: 15px 0;
+    text-shadow: 0 0 4px;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.card_container{}
+.card_container ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+}
+.card_details{
+    list-style: none;
+    margin: 20px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    perspective: 1000px;
+    transition: .4s;
+    cursor: pointer;
+}
+.card_content{}
+.thongtin1 {
+    z-index: 999;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #318fb5;
+    text-shadow: 0 0 15px;
+    box-shadow: 0 0 39px 7px;
+    flex-direction: column;
+}
+
+.thongtin1 span {
+    font-size: 25px;
+}
+
+.thongtin1 h1 {
+    font-size: 90px;
+    font-weight: bold;
+}
+.nenden {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.modal_popup {
+    visibility: hidden;
+    opacity: 0;
+}
+.active2{
+    visibility: visible;
+    opacity: 1;
+}
